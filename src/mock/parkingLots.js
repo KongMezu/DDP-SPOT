@@ -1,0 +1,67 @@
+    export const parkingLots = [
+        {
+        id: 1,
+        name: "빨간핀 주차장",
+        lat: 37.591,
+        lng: 127.036,
+        pin: "red-pin.svg",
+        type: "지상",
+        image_url: "/지상 주차장 1.jpg",
+        feeInfo: "30분: 2000원\n1시간: 4000원",
+        openingHours: "00:00-23:59",
+        limitInfo: "높이/중량 제한 없음",
+        occupancy: 80,
+        spacesLeft: 23,
+        waitTime: 15,
+        peakTime: "15:00 - 18:00"
+        },
+        {
+        id: 2,
+        name: "노란핀 주차장",
+        lat: 37.592,
+        lng: 127.037,
+        pin: "yellow-pin.svg",
+        type: "지하",
+        image_url: "/지하 주차장 1.jpeg",
+        feeInfo: "30분: 1500원\n1시간: 3000원",
+        openingHours: "06:00-22:00",
+        limitInfo: "높이/중량 제한 없음",
+        occupancy: 60,
+        spacesLeft: 15,
+        waitTime: 10,
+        peakTime: "12:00 - 15:00"
+        },
+        {
+        id: 3,
+        name: "초록핀 주차장",
+        lat: 37.593,
+        lng: 127.038,
+        pin: "green-pin.svg",
+        type: "지상",
+        image_url: "/지상 주차장 1.jpg",
+        feeInfo: "30분: 2500원\n1시간: 5000원",
+        openingHours: "00:00-23:59",
+        limitInfo: "높이/중량 제한 없음",
+        occupancy: 10,
+        spacesLeft: 40,
+        waitTime: 0,
+        peakTime: "13:00 - 16:00"
+        },
+        {
+        id: 4,
+        name: "검정핀 주차장",
+        lat: 37.594,
+        lng: 127.039,
+        pin: "black-pin.svg",
+        type: "지하",
+        image_url: "/지하 주차장 1.jpeg",
+        feeInfo: "30분: 1000원\n1시간: 2000원",
+        openingHours: "10:00 - 22:00",
+        limitInfo: "높이/중량 제한 없음",
+        occupancy: 100,
+        spacesLeft: 0,
+        waitTime: "미정",
+        peakTime: "12:00 - 18:00"
+        }
+    ];
+    
