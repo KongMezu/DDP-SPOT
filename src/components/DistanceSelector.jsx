@@ -32,4 +32,14 @@ export default function DistanceSelector() {
               fontWeight: isSelected ? 500 : 400,
               color: "#000",
               transition: "all 0.15s ease-in-out",
-              outline: "none",🔀
+              outline: "none",
+              cursor: "pointer",
+            }}
+          >
+            {opt.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
