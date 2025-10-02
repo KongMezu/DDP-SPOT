@@ -11,7 +11,7 @@
         style={{
             width: 400,
             height: 400,
-            background: "rgba(137, 252, 200, 0.05)", // #89FCC8 5%
+            background: "rgba(137, 252, 200, 0.05)", 
             borderRadius: 16,
             position: "relative",
             display: "flex",
@@ -46,8 +46,6 @@
         >
             <img src="/left_move.svg" alt="다음" width={40} height={40} />
         </button>
-
-        {/* 정보 패널 내용 */}
         
         <div
         style={{
@@ -61,7 +59,7 @@
     justifyContent: "center",
   }}
 >
-  {/* 요금 정보 */}
+
 <div className="py-6">
     <div className="text-[14px] font-semibold text-black mb-1">요금 정보</div>
     <div className="text-[12px] text-black/80 leading-relaxed whitespace-pre-line">

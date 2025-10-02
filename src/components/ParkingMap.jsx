@@ -1,4 +1,3 @@
-// components/ParkingMap.jsx
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";

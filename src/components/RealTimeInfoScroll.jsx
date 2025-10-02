@@ -1,4 +1,3 @@
-// components/RealTimeInfoScroll.jsx
 "use client";
 import useParkingStore from "../store/parkingStore";
 
