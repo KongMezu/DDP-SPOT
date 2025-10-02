@@ -1,3 +1,4 @@
+
     "use client";
     import useParkingStore from "../store/parkingStore";
 
@@ -61,7 +62,7 @@
   }}
 >
   {/* 요금 정보 */}
- <div className="py-6">
+<div className="py-6">
     <div className="text-[14px] font-semibold text-black mb-1">요금 정보</div>
     <div className="text-[12px] text-black/80 leading-relaxed whitespace-pre-line">
       {selectedParkingLot.feeInfo}

@@ -1,48 +1,68 @@
+"use client";
+import Header from "../components/Header";
+import ParkingMap from "../components/ParkingMap";
+import ParkingInfoPanel from "../components/ParkingInfoPanel";
+import RealTimeInfoScroll from "../components/RealTimeInfoScroll";
+import DistanceSelector from "../components/DistanceSelector";
+import ParkingRecommendationList from "../components/ParkingRecommendationList";
+import useParkingStore from "../store/parkingStore";
 
-        "use client";
-        import Header from "../components/Header";
-        import ParkingMap from "../components/ParkingMap";
-        import ParkingInfoPanel from "../components/ParkingInfoPanel";
-        import RealTimeInfoScroll from "../components/RealTimeInfoScroll";
-        import DistanceSelector from "../components/DistanceSelector";
-        import ParkingRecommendationList from "../components/ParkingRecommendationList";
-        import useParkingStore from "../store/parkingStore";
 
-        export default function Home() {
-        const { showInfoPanel, setShowInfoPanel } = useParkingStore();
+export default function Home() {
+  const { 
+    showInfoPanel, 
+    setShowInfoPanel, 
+    selectedParkingLot,
+    setSelectedParkingLot
+  } = useParkingStore();
 
-        return (
-        <div
-    style={{
+  const handleMoveRight = () => {
+    if (selectedParkingLot) {
+      setShowInfoPanel(true);
+    } else {
+      alert("먼저 지도에서 주차장을 선택해주세요.");
+    }
+  };
+
+  return (
+    <div
+      style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         width: 430,
         margin: "0 auto",
-    }}
+        backgroundColor: "#F8F8F8",
+        gap: "24px",
+        paddingBottom: "24px",
+      }}
     >
-    <div className="w-full flex justify-center">
-        {showInfoPanel ? (
-        <ParkingInfoPanel onMoveLeft={() => setShowInfoPanel(false)} />
+      <Header />
+
+      <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+        {showInfoPanel && selectedParkingLot ? (
+          <ParkingInfoPanel onMoveLeft={() => {
+            setShowInfoPanel(false);
+          }} />
         ) : (
-        <ParkingMap onMoveRight={() => setShowInfoPanel(true)} />
+          <ParkingMap onMoveRight={handleMoveRight} />
         )}
-    </div>
+      </div>
 
-    <div style={{ marginBottom: 16 }}>
-        <RealTimeInfoScroll />
-    </div>
+      <section style={{ width: '100%', padding: '0 15px', boxSizing: 'border-box' }}>
+         <RealTimeInfoScroll />
+      </section>
 
-    <div style={{ marginBottom: 16 }}>
+      <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+        <h3 style={{ fontSize: 14, color: '#333', fontWeight: 500 }}>
+          현재 위치 기준 반경 내 주차장 검색
+        </h3>
         <DistanceSelector />
-    </div>
+      </section>
 
-    <div style={{ marginBottom: 16 }}>
+      <section style={{ width: '100%', padding: '0 15px', boxSizing: 'border-box' }}>
         <ParkingRecommendationList />
+      </section>
     </div>
-    </div>
-
-
-        );
-        }
-
+  );
+}

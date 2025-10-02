@@ -1,4 +1,4 @@
-    "use client";
+"use client";
     import useParkingStore from "../store/parkingStore";
     import { recommendations } from "../mocks/recommendations";
     export default function ParkingRecommendationList() {
